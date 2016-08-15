@@ -3,7 +3,7 @@ require File.expand_path('convertloop/client.rb', File.dirname(__FILE__))
 # Ruby client of the ConvertLoop API
 module ConvertLoop
 
-  $convertloop_version = "0.1.0"
+  $convertloop_version = "0.1.1"
 
   class << self
     def configure(options={})
