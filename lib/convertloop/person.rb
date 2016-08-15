@@ -8,7 +8,7 @@ module ConvertLoop
 
     def create_or_update(args={})
       raise ArgumentError, "No args provided" if args.nil?
-      if args[:pid].nil? && args[:user_id] && args[:email]
+      if args[:pid].nil? && args[:user_id].nil? && args[:email].nil?
         raise ArgumentError, "You must supply at least one of the following keys: ':pid' (to update), or ':user_id' and/or ':email' (to create or update)"
       end
 
