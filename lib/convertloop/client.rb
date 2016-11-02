@@ -7,7 +7,7 @@ require 'json'
 module ConvertLoop
   class Client
     def initialize(options={})
-      @host = options[:host] || "http://api.convertloop.co"
+      @host = options[:host] || "https://api.convertloop.co"
       @version = options[:version] || "v1"
       @app_id = options[:app_id]
       @api_key = options[:api_key]

@@ -9,7 +9,7 @@ A ruby client of the ConvertLoop REST API.
 1\. Install the gem in your `Gemfile`
 
 ```ruby
-gem 'convertloop', '0.1.1'
+gem 'convertloop', '0.1.2'
 ```
 
 2\. Run `bundle install` from the command line.

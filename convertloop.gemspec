@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'convertloop'
-  s.version     = '0.1.1'
+  s.version     = '0.1.2'
   s.date        = '2016-05-07'
   s.summary     = "ConvertLoop API client"
   s.description = "A client of the ConvertLoop API"
