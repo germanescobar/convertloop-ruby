@@ -1,8 +1,8 @@
-# ConvertLoop API Client
+# ConvertLoop Ruby API Client
 
-A ruby client of the ConvertLoop REST API.
+A Ruby client of the ConvertLoop REST API. You can sign up for a ConvertLoop account at  http://convertloop.co.
 
-## Getting Started
+## Installation
 
 ### Ruby on Rails
 
@@ -43,11 +43,11 @@ ConvertLoop.configure(
 ```
 You are now ready to start calling the API methods!
 
-## API Methods
+## Getting Started
 
 ### Creating or updating a person
 
-You need to pass at least one of the following: `pid`, `user_id` or `email` to identify a user. Use `pid` when you are updating a guest of your site (you can obtain this value from the cookie `dp_pid`). User `user_id` to match the `id` of the user in your application.
+You need to pass at least one of the following: `pid`, `user_id` or `email` to identify a user. Use `pid` when you are updating a guest of your site (you can obtain this value from the cookie `dp_pid`). Use `user_id` to match the `id` of the user in your application.
 
 ```ruby
 ConvertLoop.people.create_or_update(email: "german.escobar@convertloop.co", first_name: "German", last_name: "Escobar", plan: "free")
