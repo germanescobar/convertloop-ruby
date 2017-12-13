@@ -53,12 +53,12 @@ You need to pass at least one of the following: `pid`, `user_id` or `email` to i
 ConvertLoop.people.create_or_update(email: "german.escobar@convertloop.co", first_name: "German", last_name: "Escobar", plan: "free")
 ```
 
-Any key different to `pid`, `user_id`, `email`, `first_seen_at`, `last_seen_at`, `add_tags`, and `remove_tags` will be treated as a **custom attribute** of the person.
+Any key different to `pid`, `user_id`, `email`, `first_seen_at`, `last_seen_at`, `add_to_segments`, and `remove_from_segments` will be treated as a **custom attribute** of the person.
 
-You can add or remove tags using the `add_tags` and `remove_tags` keys:
+You can add or remove people from a segment ussing the  `add_to_segments` and `remove_from_segments` keys:
 
 ```ruby
-ConvertLoop.people.create_or_update(email: "german.escobar@convertloop.co", add_tags: ['Learn Something'], remove_tags: ['Lead'])
+ConvertLoop.people.create_or_update(email: "german.escobar@convertloop.co", add_to_segments: ['Learn Something'], remove_from_segments: ['Lead'])
 ```
 
 ### Logging an event
@@ -69,4 +69,4 @@ You can log an event for any person:
 ConvertLoop.event_logs.send(name: "Billed", person: { email: "german.escobar@convertloop.co" }, metadata: { credits: 1000 }, ocurred_at: 1.hour.ago)
 ```
 
-If you don't specify the `ocurred_at` key, the current time will be used. You can use the `person` key to add **custom attributes** and **tags** to that person.
+If you don't specify the `ocurred_at` key, the current time will be used. You can use the `person` key to add **custom attributes** to that person, or add or remove that person to/from **segments**.
